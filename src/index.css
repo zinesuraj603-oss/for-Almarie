@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #FFF0F5;
+    color: #4a2135;
+    min-height: 100vh;
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-serif {
+    font-family: 'Crimson Pro', Georgia, serif;
+  }
+
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Animations */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+
+.animate-float {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+@keyframes pulse-heart {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.15); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.15); }
+  70% { transform: scale(1); }
+}
+
+.animate-heartbeat {
+  animation: pulse-heart 2.4s ease-in-out infinite;
+}
+
+@keyframes breathe-teddy {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.035) translateY(-2px); }
+}
+
+.animate-teddy-breath {
+  animation: breathe-teddy 4s ease-in-out infinite;
+}
+
+/* Custom kawaii pastel scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF0F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #F9A8D4;
+  border-radius: 9999px;
+  border: 2px solid #FFF0F5;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F472B6;
+}
