@@ -4,5 +4,5 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/midnight-birthday-mystery/',
+  base: '/for-Almarie/',
 })
